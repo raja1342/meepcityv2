@@ -1,0 +1,81 @@
+-- Last MeepCity Gui Im Making
+-- Made By Raja
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local test = Instance.new("Frame")
+local title = Instance.new("TextLabel")
+local activate = Instance.new("TextButton")
+local openclose = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+
+test.Name = "test"
+test.Parent = ScreenGui
+test.BackgroundColor3 = Color3.fromRGB(96, 97, 97)
+test.Position = UDim2.new(0.16493313, 0, 0.321839094, 0)
+test.Size = UDim2.new(0, 273, 0, 95)
+test.Visible = false
+test.Active = true
+test.Draggable = true
+
+title.Name = "title"
+title.Parent = test
+title.BackgroundColor3 = Color3.fromRGB(184, 187, 187)
+title.Size = UDim2.new(0, 273, 0, 26)
+title.Font = Enum.Font.SourceSans
+title.Text = "MeepCity Fucker V.2"
+title.TextColor3 = Color3.fromRGB(0, 0, 0)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextWrapped = true
+
+activate.Name = "activate"
+activate.Parent = test
+activate.BackgroundColor3 = Color3.fromRGB(184, 187, 187)
+activate.Position = UDim2.new(0.0293040294, 0, 0.386063904, 0)
+activate.Size = UDim2.new(0, 257, 0, 50)
+activate.Font = Enum.Font.SourceSans
+activate.Text = "Activate"
+activate.TextColor3 = Color3.fromRGB(0, 0, 0)
+activate.TextScaled = true
+activate.TextSize = 14.000
+activate.TextWrapped = true
+activate.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/KtpFQmhH'))()
+end)
+
+openclose.Name = "open/close"
+openclose.Parent = ScreenGui
+openclose.BackgroundColor3 = Color3.fromRGB(184, 187, 187)
+openclose.Position = UDim2.new(0.794947982, 0, 0.156321838, 0)
+openclose.Size = UDim2.new(0, 109, 0, 50)
+openclose.Font = Enum.Font.SourceSans
+openclose.Text = "Open/Close"
+openclose.TextColor3 = Color3.fromRGB(0, 0, 0)
+openclose.TextScaled = true
+openclose.TextSize = 14.000
+openclose.TextWrapped = true
+openclose.Active = true
+openclose.Draggable = true
+
+-- Scripts:
+
+local function VJYS_fake_script() -- openclose.LocalScript 
+	local script = Instance.new('LocalScript', openclose)
+
+	local frame = script.Parent.Parent.test
+	local open = false
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if frame.Visible == false then
+			frame.Visible = true
+		else
+			frame.Visible = false
+		end
+	end)
+end
+coroutine.wrap(VJYS_fake_script)()
